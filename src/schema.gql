@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UsersSchema {
+  id: Int!
+  name: String!
+  username: String!
+  email: String!
+}
+
+type Query {
+  getAllUsers: [UsersSchema!]!
+  getUser(id: Int!): UsersSchema!
+}
+
+type Mutation {
+  createUser(data: UserDTO!): [UsersSchema!]!
+}
+
+input UserDTO {
+  name: String!
+  username: String!
+  email: String!
+}
